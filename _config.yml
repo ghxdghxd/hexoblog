@@ -15,7 +15,7 @@ timezone:
 url: https://ghxdghxd.github.io
 root: /
 # permalink: :year/:month/:day/:title/
-permalink: pages/:category/:year-:month-:day-:title.html
+permalink: papers/:category/:year-:month-:day-:title.html
 permalink_defaults:
 
 # Directory
