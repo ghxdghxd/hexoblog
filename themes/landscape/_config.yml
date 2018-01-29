@@ -159,7 +159,7 @@ sidebar:
   # display: post
   # display: always
   # display: hide
-  #display: remove
+  # display: remove
 
   # Sidebar offset from top menubar in pixels.
   offset: 12
