@@ -1,4 +1,6 @@
-# hexo + github
+---
+title: hexo安装配置
+---
 
 + 1
 ```
