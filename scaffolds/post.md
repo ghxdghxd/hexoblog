@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 description:
-categories:
-tags:
+categories: {{categoriess}}
+tags: {{tags}}
 comments: true
 ---

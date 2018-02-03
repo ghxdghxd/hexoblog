@@ -1,18 +1,23 @@
 ---
 title: git submodule
-subtitle: git 子模块
-description: 抄袭于: http://www.cnblogs.com/nicksheng/p/6201711.html，仅支持于自己查找方便
+description: 抄袭于 http://www.cnblogs.com/nicksheng/p/6201711.html，仅支持于自己查找方便
 categories: git
 tags: git
 comments: true
 date: 2018-02-03 22:29:21
 ---
 
-使用场景
-当项目越来越庞大之后，不可避免的要拆分成多个子模块，我们希望各个子模块有独立的版本管理，并且由专门的人去维护，这时候我们就要用到git的submodule功能。
-常用命令
-git clone <repository> --recursive 递归的方式克隆整个项目git submodule add <repository><path> 添加子模块git submodule init 初始化子模块git submodule update 更新子模块git submodule foreach git pull 拉取所有子模块
-如何使用
+> 使用场景: 用于项目 中的 项目
+
+# 常用命令
+```shell
+git clone <repository> --recursive 递归的方式克隆整个项目
+git submodule add <repository><path> 添加子模块
+git submodule init 初始化子模块
+git submodule update 更新子模块
+git submodule foreach git pull 拉取所有子模块
+```
+# 如何使用
 1. 创建带子模块的版本库
 例如我们要创建如下结构的项目
 project  |--moduleA  |--readme.txt
