@@ -3,8 +3,8 @@ title: 之感
 comments: true
 date: 2018-02-03 23:31:00
 description:
-categories: router
-tags: mine
+categories: 路由器
+tags: 私人
 ---
 # 之感
 1. 话多应知，话少需明  
