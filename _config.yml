@@ -54,8 +54,17 @@ index_generator:
   
 # Category & Tag
 default_category: uncategorized
-category_map:
+category_map: 
+    编程: programming
+    路由器: router
+    网球: tennis
 tag_map:
+    python: python
+    R: R
+    shell: shell
+    git: git
+    私人: mine
+    网球: tennis
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
