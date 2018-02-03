@@ -1,10 +1,10 @@
 ---
 title: git submodule
+date: 2018-02-03 22:29:21
 description: 抄袭于 http://www.cnblogs.com/nicksheng/p/6201711.html，仅支持于自己查找方便
 categories: git
 tags: git
 comments: true
-date: 2018-02-03 22:29:21
 ---
 
 > 使用场景: 用于项目 中的 项目

@@ -1,6 +1,10 @@
 ---
 title: git
 date: 2018-02-03 23:19:34
+description: git的用法
+categories: git
+tags: git
+comments: true
 ---
 # Git用法
 
