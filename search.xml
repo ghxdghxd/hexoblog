@@ -3,6 +3,45 @@
   
     
     <entry>
+      <title><![CDATA[git submodule]]></title>
+      <url>/papers/2018-02-03-submodule.html</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>使用场景: 用于项目 中的 项目</p>
+</blockquote>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;repository&gt; --recursive 递归的方式克隆整个项目</span><br><span class="line">git submodule add &lt;repository&gt;&lt;path&gt; 添加子模块</span><br><span class="line">git submodule init 初始化子模块</span><br><span class="line">git submodule update 更新子模块</span><br><span class="line">git submodule foreach git pull 拉取所有子模块</span><br></pre></td></tr></table></figure>
+<h1 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h1><ol>
+<li>创建带子模块的版本库<br>例如我们要创建如下结构的项目<br>project  |–moduleA  |–readme.txt<br>创建project版本库，并提交readme.txt文件<br>git init –bare project.gitgit clone project.git project1cd project1echo”This is a project.” &gt; readme.txtgit add .git commit -m “add readme.txt”git push origin mastercd ..<br>创建moduleA版本库，并提交a.txt文件<br>git init –bare moduleA.gitgit clone moduleA.git moduleA1cd moduleA1echo”This is a submodule.” &gt; a.txtgit add .git commit -m “add a.txt”git push origin mastercd ..<br>在project项目中引入子模块moduleA，并提交子模块信息<br>cd project1git submodule add ../moduleA.git moduleAgit statusgit diffgit add .git commit -m”add submodule”git push origin mastercd ..<br>使用git status可以看到多了两个需要提交的文件，其中.gitmodules指定submodule的主要信息，包括子模块的路径和地址信息，moduleA指定了子模块的commit id，使用git diff可以看到这两项的内容。这里需要指出父项目的git并不会记录submodule的文件变动，它是按照commit id指定submodule的git header，所以.gitmodules和moduleA这两项是需要提交到父项目的远程仓库的。<br>On branch masterYour branch is up-to-datewith’origin/master’.Changes to be committed:  (use “git reset HEAD …”to unstage)    new file:   .gitmodules    new file:   moduleA</li>
+<li>克隆带子模块的版本库<br>方法一，先clone父项目，再初始化submodule，最后更新submodule，初始化只需要做一次，之后每次只需要直接update就可以了，需要注意submodule默认是不在任何分支上的，它指向父项目存储的submodule commit id。<br>git clone project.git project2cd project2git submodule initgit submodule updatecd ..<br>方法二，采用递归参数–recursive，需要注意同样submodule默认是不在任何分支上的，它指向父项目存储的submodule commit id。<br>git clone project.git project3 –recursive</li>
+<li>修改子模块<br>修改子模块之后只对子模块的版本库产生影响，对父项目的版本库不会产生任何影响，如果父项目需要用到最新的子模块代码，我们需要更新父项目中submodule commit id，默认的我们使用git status就可以看到父项目中submodule commit id已经改变了，我们只需要再次提交就可以了。<br>cd project1/moduleAgit branchecho”This is a submodule.” &gt; b.txtgit add .git commit -m “add b.txt”git push origin mastercd ..git statusgit diffgit add .git commit -m “update submodule add b.txt”git push origin mastercd ..</li>
+<li>更新子模块<br>更新子模块的时候要注意子模块的分支默认不是master。<br>方法一，先pull父项目，然后执行git submodule update，注意moduleA的分支始终不是master。<br>cd project2git pullgit submodule updatecd ..<br>方法二，先进入子模块，然后切换到需要的分支，这里是master分支，然后对子模块pull，这种方法会改变子模块的分支。<br>cd project3/moduleAgit checkout mastercd ..git submodule foreach git pullcd ..</li>
+<li>删除子模块<br>网上有好多用的是下面这种方法<br>git rm –cached moduleArm -rf moduleArm .gitmodulesvim .git/config<br>删除submodule相关的内容，例如下面的内容<br>[submodule “moduleA”]      url = /Users/nick/dev/nick-doc/testGitSubmodule/moduleA.git<br>然后提交到远程服务器<br>git add .git commit -m”remove submodule”<br>但是我自己本地实验的时候，发现用下面的方式也可以，服务器记录的是.gitmodules和moduleA，本地只要用git的删除命令删除moduleA，再用git status查看状态就会发现.gitmodules和moduleA这两项都已经改变了，至于.git/config，仍会记录submodule信息，但是本地使用也没发现有什么影响，如果重新从服务器克隆则.git/config中不会有submodule信息。<br>git rm moduleAgit statusgit commit -m”remove submodule”git push origin master</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> git </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[page]]></title>
+      <url>/papers/2018-02-03-page.html</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[hexo安装配置]]></title>
       <url>/papers/2018-01-29-hexo.html</url>
       <content type="html"><![CDATA[<ul>
