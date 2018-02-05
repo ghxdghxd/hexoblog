@@ -55,10 +55,12 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map: 
+    运维: operation
     编程: programming
     路由器: router
     网球: tennis
 tag_map:
+    linux: linux
     python: python
     R: R
     shell: shell
