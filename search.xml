@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[生物信息学]]></title>
+      <url>/papers/2018-02-06-bioinfomatic.html</url>
+      <content type="html"><![CDATA[<h1 id="什么是生物信息"><a href="#什么是生物信息" class="headerlink" title="什么是生物信息"></a>什么是生物信息</h1>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[echo color]]></title>
+      <url>/papers/2018-02-05-echo-color.html</url>
+      <content type="html"><![CDATA[<p>echo显示带颜色，需要使用参数-e<br>格式如下:<br>echo -e “\033[字背景颜色;文字颜色m字符串\033[0m”<br>例如:<br>echo -e “\033[41;37m TonyZhang \033[0m”<br>其中41的位置代表底色, 37的位置是代表字的颜色</p>
+<p> 注：<br>1、字背景颜色和文字颜色之间是英文的“”””<br>2、文字颜色后面有个m<br>3、字符串前后可以没有空格，如果有的话，输出也是同样有空格</p>
+<p>下面看几个例子：<br>echo -e “\033[30m 黑色字 \033[0m”<br>echo -e “\033[31m 红色字 \033[0m”<br>echo -e “\033[32m 绿色字 \033[0m”<br>echo -e “\033[33m 黄色字 \033[0m”<br>echo -e “\033[34m 蓝色字 \033[0m”<br>echo -e “\033[35m 紫色字 \033[0m”<br>echo -e “\033[36m 天蓝字 \033[0m”<br>echo -e “\033[37m 白色字 \033[0m”</p>
+<p>echo -e “\033[40;37m 黑底白字 \033[0m”<br>echo -e “\033[41;37m 红底白字 \033[0m”<br>echo -e “\033[42;37m 绿底白字 \033[0m”<br>echo -e “\033[43;37m 黄底白字 \033[0m”<br>echo -e “\033[44;37m 蓝底白字 \033[0m”<br>echo -e “\033[45;37m 紫底白字 \033[0m”<br>echo -e “\033[46;37m 天蓝底白字 \033[0m”<br>echo -e “\033[47;30m 白底黑字 \033[0m”</p>
+<p>控制选项说明 ：</p>
+<p>\33[0m 关闭所有属性<br>\33[1m 设置高亮度<br>\33[4m 下划线<br>\33[5m 闪烁<br>\33[7m 反显<br>\33[8m 消隐<br>\33[30m – \33[37m 设置前景色<br>\33[40m – \33[47m 设置背景色<br>\33[nA 光标上移n行<br>\33[nB 光标下移n行<br>\33[nC 光标右移n行<br>\33[nD 光标左移n行<br>\33[y;xH设置光标位置<br>\33[2J 清屏<br>\33[K 清除从光标到行尾的内容<br>\33[s 保存光标位置<br>\33[u 恢复光标位置<br>\33[?25l 隐藏光标<br>\33[?25h 显示光标 </p>
+]]></content>
+      
+        <categories>
+            
+            <category> linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[之感]]></title>
       <url>/papers/2018-02-03-sense.html</url>
       <content type="html"><![CDATA[<h1 id="之感"><a href="#之感" class="headerlink" title="之感"></a>之感</h1><ol>
@@ -55,15 +89,26 @@
       <title><![CDATA[git]]></title>
       <url>/papers/2018-02-03-git.html</url>
       <content type="html"><![CDATA[<h1 id="Git用法"><a href="#Git用法" class="headerlink" title="Git用法"></a>Git用法</h1><h2 id="1-建立仓库"><a href="#1-建立仓库" class="headerlink" title="1 建立仓库"></a>1 建立仓库</h2><ul>
-<li>远程<br><code>git remote add origin git@github.com:ghxdghxd/$NAME.git</code></li>
-<li>本地<br><code>git init</code></li>
+<li>远程</li>
 </ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:ghxdghxd/$NAME.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>本地(初始化)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <h2 id="2-常用操作"><a href="#2-常用操作" class="headerlink" title="2 常用操作"></a>2 常用操作</h2><ul>
-<li>拉取  <code>git pull origin master</code></li>
-<li>提交<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add *.py</span><br><span class="line">git commit -m "message"</span><br><span class="line">git push origin master/dev/develop</span><br></pre></td></tr></table></figure>
-</li>
+<li>拉取</li>
 </ul>
-<h2 id="2-分支类型"><a href="#2-分支类型" class="headerlink" title="2 分支类型"></a>2 分支类型</h2><table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<ul>
+<li>提交</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add *.py</span><br><span class="line">git commit -m "message"</span><br><span class="line">git push origin master/dev/develop</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重命令与删除</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm</span><br><span class="line">git mv</span><br></pre></td></tr></table></figure>
+<h2 id="3-分支操作"><a href="#3-分支操作" class="headerlink" title="3 分支操作"></a>3 分支操作</h2><table>
 <thead>
 <tr>
 <th style="text-align:center">主支</th>
@@ -83,21 +128,13 @@
 </tr>
 </tbody>
 </table>
-<h3 id="查看本地-全部-远程分支"><a href="#查看本地-全部-远程分支" class="headerlink" title="查看本地/全部/远程分支"></a>查看本地/全部/远程分支</h3><pre><code>git branch  /-a/r
-</code></pre><h3 id="建立分支"><a href="#建立分支" class="headerlink" title="建立分支"></a>建立分支</h3><pre><code>git branch [name]
-</code></pre><h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><pre><code>git branch -d [name]
-</code></pre><h3 id="建立并切换开发分支"><a href="#建立并切换开发分支" class="headerlink" title="建立并切换开发分支"></a>建立并切换开发分支</h3><pre><code>git checkout -b [name] origin/develop
-</code></pre><h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><pre><code>git checkout [name]
-</code></pre><h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><pre><code>git merge --no-ff [name]
-</code></pre><h3 id="本地分支提交到远程"><a href="#本地分支提交到远程" class="headerlink" title="本地分支提交到远程"></a>本地分支提交到远程</h3><pre><code>git push origin dev:develop
-</code></pre><h3 id="重命名"><a href="#重命名" class="headerlink" title="重命名"></a>重命名</h3><pre><code>git mv
-</code></pre><h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><pre><code>git rm
-</code></pre><h4 id="push命令用于将本地分支的更新，推送到远程主机。"><a href="#push命令用于将本地分支的更新，推送到远程主机。" class="headerlink" title="push命令用于将本地分支的更新，推送到远程主机。"></a>push命令用于将本地分支的更新，推送到远程主机。</h4><p>它的格式与git pull命令相仿。</p>
-<pre><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;
-</code></pre><p>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，<br>所以git pull是&lt;远程分支&gt;:&lt;本地分支&gt;，而git push是&lt;本地分支&gt;:&lt;远程分支&gt;。<br>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被新建。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git branch  /-a/r      # 查看本地/全部/远程分支</span><br><span class="line">git branch [name]      # 建立分支</span><br><span class="line">git branch -d [name]   # 删除分支</span><br><span class="line"></span><br><span class="line">git checkout -b [name] origin/develop  # 建立并切换开发分支</span><br><span class="line">git checkout [name]       # 切换分支</span><br><span class="line">git merge --no-ff [name]  # 合并分支</span><br><span class="line"></span><br><span class="line">git push origin dev:develop # 本地分支提交到远程</span><br></pre></td></tr></table></figure>
+<h2 id="push命令用于将本地分支的更新，推送到远程主机。"><a href="#push命令用于将本地分支的更新，推送到远程主机。" class="headerlink" title="push命令用于将本地分支的更新，推送到远程主机。"></a>push命令用于将本地分支的更新，推送到远程主机。</h2><pre><code>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;
+</code></pre><p>git pull类似:<br>    git pull &lt;远程分支&gt;:&lt;本地分支&gt;</p>
+<p>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，<br>所以git pull是&lt;远程分支&gt;:&lt;本地分支&gt;，而git push是&lt;本地分支&gt;:&lt;远程分支&gt;。<br>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被新建。</p>
 <pre><code>git push origin master
 </code></pre><p>上面命令表示，将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。</p>
-<p><strong>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。</strong></p>
+<p>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。</p>
 <pre><code>git push origin :master
 </code></pre><p>等同于</p>
 <pre><code>git push origin --delete master
@@ -122,13 +159,22 @@
 </code></pre><p>上面命令使用–force选项，结果导致在远程主机产生一个”非直进式”的合并(non-fast-forward merge)。除非你很确定要这样做，否则应该尽量避免使用–force选项。</p>
 <p>最后，git push不会推送标签(tag)，除非使用–tags选项。</p>
 <pre><code>git push origin --tags
-</code></pre><h2 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h2><pre><code>git config --global core.quotepath false
-</code></pre><p>core.quotepath设为false的话，就不会对0x80以上的字符进行quote。中文显示正常。</p>
-<h2 id="gitignore忽略文件"><a href="#gitignore忽略文件" class="headerlink" title="gitignore忽略文件"></a>gitignore忽略文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">1、配置语法：</span><br><span class="line"></span><br><span class="line">　　以斜杠“/”开头表示目录；</span><br><span class="line"></span><br><span class="line">　　以星号“*”通配多个字符；</span><br><span class="line"></span><br><span class="line">　　以问号“?”通配单个字符</span><br><span class="line"></span><br><span class="line">　　以方括号“[]”包含单个字符的匹配列表；</span><br><span class="line"></span><br><span class="line">　　以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；</span><br><span class="line"></span><br><span class="line">　　</span><br><span class="line"></span><br><span class="line">　　此外，git 对于 .ignore 配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效；</span><br><span class="line"></span><br><span class="line">2、示例：</span><br><span class="line"></span><br><span class="line">　　（1）规则：fd1/*</span><br><span class="line">　　　　  说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 /fd1/ 目录，还是某个子目录 /child/fd1/ 目录，都会被忽略；</span><br><span class="line"></span><br><span class="line">　　（2）规则：/fd1/*</span><br><span class="line">　　　　  说明：忽略根目录下的 /fd1/ 目录的全部内容；</span><br><span class="line"></span><br><span class="line">　　（3）规则：</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">!.gitignore</span><br><span class="line">!/fw/bin/</span><br><span class="line">!/fw/sf/</span><br><span class="line"></span><br><span class="line">说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录；</span><br></pre></td></tr></table></figure>
-<h2 id="git-子模块"><a href="#git-子模块" class="headerlink" title="git 子模块"></a>git 子模块</h2><blockquote>
-<p>仓库包括别的仓库</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &lt;仓库地址&gt; &lt;本地路径&gt;</span><br></pre></td></tr></table></figure>]]></content>
+</code></pre><h2 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a>中文乱码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.quotepath false</span><br></pre></td></tr></table></figure>
+<p>core.quotepath设为false的话，就不会对0x80以上的字符进行quote。中文显示正常。</p>
+<h2 id="gitignore忽略文件"><a href="#gitignore忽略文件" class="headerlink" title="gitignore忽略文件"></a>gitignore忽略文件</h2><p>1、配置语法：</p>
+<p>　　以斜杠“/”开头表示目录；</p>
+<p>　　以星号“*”通配多个字符；</p>
+<p>　　以问号“?”通配单个字符</p>
+<p>　　以方括号“[]”包含单个字符的匹配列表；</p>
+<p>　　以叹号“!”表示不忽略(跟踪)匹配到的文件或目录；</p>
+<p>　　此外，git 对于 .ignore 配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效；</p>
+<p>2、示例：</p>
+<p>　　（1）规则：fd1/*<br>　　　　  说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 /fd1/ 目录，还是某个子目录 /child/fd1/ 目录，都会被忽略；</p>
+<p>　　（2）规则：/fd1/*<br>　　　　  说明：忽略根目录下的 /fd1/ 目录的全部内容；</p>
+<p>　　（3）规则：</p>
+<p>/*<br>!.gitignore<br>!/fw/bin/<br>!/fw/sf/</p>
+<p>说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录；</p>
+]]></content>
       
         <categories>
             
