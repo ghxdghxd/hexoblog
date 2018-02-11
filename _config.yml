@@ -55,17 +55,17 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map: 
+    生信: bioinformation
     运维: operation
-    编程: programming
+    编程: coding
+    兴趣: interest
     路由器: router
-    网球: tennis
 tag_map:
     linux: linux
     python: python
     R: R
     shell: shell
     git: git
-    路由器: router
     私人: mine
     网球: tennis
 
