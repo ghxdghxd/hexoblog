@@ -6,32 +6,37 @@ description: R与rstudio的安装
 categories: coding
 tags: R
 ---
+# install R
 
++ error
+
+```bash
 File failed to load: /extensions/MathZoom.js
 export CFLAGS="-I/share/apps/R_depends/include"
 export LDFLAGS="-L/share/apps/R_depends/lib"
-#  install R
+```
 
-##  ./configure
+## ./configure
+
     ./configure --prefix=/opt/R-3.3.1 --enable-R-shlib --with-libpng --with-jpeglib --with-libtiff --with-x --with-tcltk
 
-#### 1. configure: error: No F77 compiler found
+### 1. configure: error: No F77 compiler found
 
     sudo apt-get install gfortran
 
-#### 2. configure: error: --with-readline
+### 2. configure: error: --with-readline
 
     sudo apt-get install libreadline-dev
 
-#### 3. configure: error: --with-x=yes
+### 3. configure: error: --with-x=yes
 
     sudo apt-get install libxt-dev
 
-#### 4. checking whether zlib support suffices.
+### 4. checking whether zlib support suffices.
 
     sudo apt-get install zlib1g-dev
 
-#### 5. checking whether bzip2 support suffices
+### 5. checking whether bzip2 support suffices
 
     wget <http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz>
 
@@ -53,11 +58,11 @@ export LDFLAGS="-L/share/apps/R_depends/lib"
 
     install bzip2-lib
 
-#### 6. configure: error: "liblzma
+### 6. configure: error: "liblzma
 
     sudo apt-get install liblzma-dev
 
-#### 7. configure: error: pcre &gt;= 8.10
+### 7. configure: error: pcre &gt;= 8.10
 
     wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
 
@@ -69,8 +74,7 @@ export LDFLAGS="-L/share/apps/R_depends/lib"
 
     make &amp; sudo make install
 
-#### 8. libcurl &gt;= 7.28.0 library and headers are required with support for
-https
+### 8. libcurl &gt;= 7.28.0 library and headers are required with support for https
 
     wget https://www.openssl.org/source/openssl-1.1.0b.tar.gz
 
@@ -92,18 +96,15 @@ https
 
     make &amp; sudo make install
 
-#### 9.configure: WARNING: you cannot build info or HTML versions of the R manuals
+### 9.configure: WARNING: you cannot build info or HTML versions of the R manuals
 
     sudo apt-get install texinfo
 
-#### 10. configure: WARNING: you cannot build PDF versions of the R manuals
-
-####      configure: WARNING: you cannot build PDF versions of vignettes and help pages
+### 10. configure: WARNING: you cannot build PDF versions of the R manuals, configure: WARNING: you cannot build PDF versions of vignettes and help pages
 
     sudo apt-get install texlive
 
-#### 11. configure: WARNING: neither inconsolata.sty nor zi4.sty found: PDF
-vignettes and package manuals will not be rendered optimally
+### 11. configure: WARNING: neither inconsolata.sty nor zi4.sty found: PDF vignettes and package manuals will not be rendered optimally
 
     wget <http://mirrors.ctan.org/install/fonts/inconsolata.tds.zip>
 
@@ -115,15 +116,15 @@ vignettes and package manuals will not be rendered optimally
 
     sudo mktexlsr
 
-#### 12. 本版本不支持png
+### 12. 本版本不支持png
 
     sudo apt-get install libpng16-dev
 
     sudo apt-get install libtiff5-dev
 
-##  make
+## make
 
-#### 1./usr/local/lib/libbz2.a: 无法添加符号: 错误的值
+### 1./usr/local/lib/libbz2.a: 无法添加符号: 错误的值
 
     rm /usr/local/lib/libbz2.a
 
@@ -137,8 +138,7 @@ vignettes and package manuals will not be rendered optimally
 
     sudo make install
 
-#### 2./usr/bin/ld: cannot find -lbz2 ;  collect2: error: ld returned 1 exit
-status
+### 2./usr/bin/ld: cannot find -lbz2 ;  collect2: error: ld returned 1 exit status
 
     sudo apt-get install libbz2-dev
     会用到make CC='gcc -fPIC'
@@ -146,13 +146,13 @@ status
 
 ## make install
 
-#### 1.conftest.c:1:17: fatal error: jni.h
+### 1.conftest.c:1:17: fatal error: jni.h
 
     cd R-3.3.1/doc
 
     wget <https://cran.r-project.org/doc/manuals/r-release/NEWS.pdf>
 
-# install rstudio
+## install rstudio
 
     sudo apt-get install libjpeg62-dev
 
@@ -162,13 +162,9 @@ status
 
     export RSTUDIO_WHICH_R="/opt/R-3.3.1/bin/R" 添加到/etc/profile或~/.profile
 
-# run R
+### run R
 
-## Error in grid.Call(L_textBounds, as.graphicsAnnot(xlabel),xlabel),x
-
-x, x$y, :无法载入X11字面为2,大小为20的字形-*-courier-%s-%s-*-*-%d-*-*-*-*-*-*-*
-
-
+### Error in grid.Call(L_textBounds, as.graphicsAnnot(xlabel),xlabel),x x, x$y, :无法载入X11字面为2,大小为20的字形-*-courier-%s-%s-*-*-%d-*-*-*-*-*-*-*
 
     sudo apt-get install t1-xfree86-nonfree ttf-xfree86-nonfree ttf-xfree86-nonfree-syriac
 
@@ -177,13 +173,13 @@ x, x$y, :无法载入X11字面为2,大小为20的字形-*-courier-%s-%s-*-*-%d-*
     sudo apt-get install mesa-utils
     sudo apt-get install libxtst-dev
 
-# using R
+### using R
 
-## 无法载入共享目标对象 stringi.so
+### 无法载入共享目标对象 stringi.so
 
     install.packages(stringi)
 
-## R install.packages returns "failed to create lock directory"
+### R install.packages returns "failed to create lock directory"
 
     R CMD INSTALL --no-lock &lt;pkg&gt;
 
@@ -191,12 +187,11 @@ x, x$y, :无法载入X11字面为2,大小为20的字形-*-courier-%s-%s-*-*-%d-*
 
     install.packages("Rcpp", dependencies=TRUE, INSTALL_opts = c('\--no-lock'))
 
-## An irrecoverable exception occurred. R is aborting now ... ERROR: loading
-failed
+### An irrecoverable exception occurred. R is aborting now ... ERROR: loading failed
 
     R CMD INSTALL --no-test-load *packages*
 
-## nlopt
+### nlopt
 
     ./configure --enable-shared
 
