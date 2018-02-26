@@ -56,6 +56,7 @@ index_generator:
 default_category: uncategorized
 category_map: 
     生信: bioinformation
+    统计: statistics
     运维: operation
     编程: coding
     兴趣: interest
