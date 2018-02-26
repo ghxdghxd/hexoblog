@@ -163,3 +163,15 @@ core.quotepath设为false的话，就不会对0x80以上的字符进行quote。�
 !/fw/sf/
 
 说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录；
+
+## warning: LF will be replaced by CRLF
+
+在Windows环境下使用git进行add的时候，会提示如下warning: “warning:LF will be replacee by CRLF”。
+
+这是因为在Windows中的换行符为CRLF，而在Linux中的换行符为LF。
+在git创建的项目中换行符为LF，而执行git add时，系统会提示LF将被转换为CRLF。
+解决的办法很简单，禁止git的自动转换即可。
+
+```bash
+git config --global core.autocrlf false //禁用自动转换
+```
