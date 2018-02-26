@@ -35,10 +35,27 @@ deploy:
   repository: git@github.com:ghxdghxd/ghxdghxd.github.io.git
 ```
 
-+ 4 插件
++ 4 pdf插件
 
 ```bash
 直接插入并显示pdf
 npm install hexo-pdf
 {% pdf /images/name.pdf %}
+```
+
++ 5 插入脚注(reference)
+
+```bash
+npm install hexo-reference --save
+例：
+basic footnote[^1]
+here is an inline footnote[^2](inline footnote)
+and another one[^3]
+and another one[^4]
+
+[^1]: basic footnote content
+[^3]: paragraph
+footnote
+content
+[^4]: footnote content with some [markdown](https://en.wikipedia.org/wiki/Markdown)
 ```
