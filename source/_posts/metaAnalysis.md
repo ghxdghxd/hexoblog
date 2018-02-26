@@ -10,4 +10,3 @@ tags: R
 
 <!-- <embed src="" width="100%" height="550" type=/images/metafor_diagram.pdf> -->
 {% pdf /images/metafor_diagram.pdf %}
-
