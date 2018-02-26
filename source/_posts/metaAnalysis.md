@@ -8,5 +8,6 @@ tags: R
 ---
 # An Overview of Functions in the metafor Package
 
-<!-- <embed src="" width="100%" height="550" type=/images/metafor_diagram.pdf> -->
-{% pdf /images/metafor_diagram.pdf %}
+{% pdf /documents/metafor_diagram.pdf %}
+
+{% pdf /documents/talks_2016_viechtbauer_gesis_ma_with_metafor.pdf %}
