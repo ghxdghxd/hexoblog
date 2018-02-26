@@ -1,5 +1,5 @@
 ---
-title: metaAnalysis
+title: meta Analysis
 comments: true
 date: 2018-02-26 17:17:46
 description: metafor
