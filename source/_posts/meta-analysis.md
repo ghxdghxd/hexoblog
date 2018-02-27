@@ -28,5 +28,7 @@ dm$se<-(dm$se1+dm$se2)/2
 
 library(metafor)
 dmres<-rma.uni(yi=logor, sei=se, data=dm)
-forest(dmres, atransf=exp)
+pdf()
+forest(dmres, atransf=exp, showweights = T, mlab = "rsid", slab = paste0("study", 1:5))
+dev.off()
 ```
