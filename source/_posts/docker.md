@@ -6,7 +6,6 @@ description:
 categories: 运维
 tags: 
 ---
-
 # docker
 
 ## centos yum install docker
@@ -106,8 +105,7 @@ docker info
 + 查找镜像 docker search
 + 查看容器 docker ps -a
 + 运行容器 docker run
-+ 将宿主机的/var/data挂载到容器中的/data: docker run -tdi -v /var/data:/data centos  
++ 将宿主机的/var/data挂载到容器中的/data: docker run -tdi -v /var/data:/data centos
 
 如果ls: cannot open directory '.': Permission denied
 修改/etc/sysconfig/docker，OPTIONS去掉--selinux-enabled
-
