@@ -32,7 +32,7 @@ export LDFLAGS="-L/share/apps/R_depends/lib"
 
     sudo apt-get install libxt-dev
 
-### 4. checking whether zlib support suffices.
+### 4. checking whether zlib support suffices
 
     sudo apt-get install zlib1g-dev
 
