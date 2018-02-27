@@ -2,7 +2,7 @@
 title: meta Analysis
 comments: true
 date: 2018-02-26 17:17:46
-description: metafor
+description: meta analysis with metafor
 categories: 统计
 tags: R
 ---
