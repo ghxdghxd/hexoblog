@@ -67,6 +67,7 @@ tag_map:
     R: R
     shell: shell
     git: git
+    asome: awesome
     私人: mine
     网球: tennis
 
