@@ -7,7 +7,7 @@ tags: awesome
 ---
 # the story
 
-I should tell you one story which I experience.
+I should tell you one story which I experienced.
 
 ## What is Bioinfomatics
 
