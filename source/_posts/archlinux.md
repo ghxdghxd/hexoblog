@@ -4,10 +4,10 @@ comments: true
 date: 2018-03-08 10:55:38
 description:
 categories: 
--operation
--interest
+    -operation
+    -interest
 tags: 
--linux
+    -linux
 ---
 # archlinux安装与配置
 
