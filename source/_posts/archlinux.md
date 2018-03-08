@@ -59,9 +59,26 @@ grub-install --target=i386-pc --recheck --debug /dev/sda
 grup-mkconfig -o /boot/grub/grub.cfg
 ```
 
+* 主机名
+
+```shell
+echo Garch >> /etc/hostname
+```
+
 * 网络配置
 
 ```shell
 systemctl enable dhcpcd.service #有线
 pacman -S iw wpa_supplicant dialog #无线
+```
+
+## archlinux 配置X
+
+```shell
+#最小安装
+pacman -S xorg-server # X桌面
+pacman -S xf86-video-ati # 显卡驱动
+pacman -S gnome gnome-tweak-tool
+# 可选
+
 ```
