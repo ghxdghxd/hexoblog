@@ -79,6 +79,7 @@ pacman -S iw wpa_supplicant dialog #无线
 pacman -S xorg-server # X桌面
 pacman -S xf86-video-ati # 显卡驱动
 pacman -S gnome gnome-tweak-tool
+pacman -S ttf-ubuntu
 # 可选
 
 ```
