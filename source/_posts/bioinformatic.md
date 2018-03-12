@@ -5,11 +5,7 @@ date: 2018-02-06 14:16:29
 categories: 生信
 tags: awesome
 ---
-# the story
-
-I should tell you one story which I experienced.
-
-## What is Bioinfomatics
+# What is Bioinfomatics
 
 Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data.As an interdisciplinary field of science, bioinformatics combines Computer Science, Biology, Mathematics, and Engineering to analyze and interpret biological data. Bioinformatics has been used for in silico analyses of biological queries using mathematical and statistical techniques. More broadly, bioinformatics is applied statistics and computing to biological science.
 
