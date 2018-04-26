@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +16,13 @@
 
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-corner-indicator.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -79,7 +86,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     version: '6.0.2',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -112,10 +119,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="echo color">
 <meta property="og:url" content="https://ghxdghxd.github.io/papers/2018-02-05-echo-color.html">
-<meta property="og:site_name" content="JTGuo&#39;s Blog">
+<meta property="og:site_name" content="DGBlog">
 <meta property="og:description" content="echo显示带颜色，需要使用参数-e格式如下:echo -e “\033[字背景颜色;文字颜色m字符串\033[0m”例如:echo -e “\033[41;37m TonyZhang \033[0m”其中41的位置代表底色, 37的位置是代表字的颜色  注：1、字背景颜色和文字颜色之间是英文的“”””2、文字颜色后面有个m3、字符串前后可以没有空格，如果有的话，输出也是同样有空格 下面看几个例子">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-05T06:05:08.453Z">
+<meta property="og:updated_time" content="2018-03-20T05:33:23.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="echo color">
 <meta name="twitter:description" content="echo显示带颜色，需要使用参数-e格式如下:echo -e “\033[字背景颜色;文字颜色m字符串\033[0m”例如:echo -e “\033[41;37m TonyZhang \033[0m”其中41的位置代表底色, 37的位置是代表字的颜色  注：1、字背景颜色和文字颜色之间是英文的“”””2、文字颜色后面有个m3、字符串前后可以没有空格，如果有的话，输出也是同样有空格 下面看几个例子">
@@ -134,7 +141,7 @@
     sidebar: "",
   };
 </script>
-  <title>echo color | JTGuo's Blog</title>
+  <title>echo color | DGBlog</title>
   
 
 
@@ -192,7 +199,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">JTGuo's Blog</span>
+        <span class="site-title">DGBlog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -333,7 +340,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JTGuo's Blog">
+      <meta itemprop="name" content="DGBlog">
     </span>
 
     
@@ -413,7 +420,7 @@
 <p>下面看几个例子：<br>echo -e “\033[30m 黑色字 \033[0m”<br>echo -e “\033[31m 红色字 \033[0m”<br>echo -e “\033[32m 绿色字 \033[0m”<br>echo -e “\033[33m 黄色字 \033[0m”<br>echo -e “\033[34m 蓝色字 \033[0m”<br>echo -e “\033[35m 紫色字 \033[0m”<br>echo -e “\033[36m 天蓝字 \033[0m”<br>echo -e “\033[37m 白色字 \033[0m”</p>
 <p>echo -e “\033[40;37m 黑底白字 \033[0m”<br>echo -e “\033[41;37m 红底白字 \033[0m”<br>echo -e “\033[42;37m 绿底白字 \033[0m”<br>echo -e “\033[43;37m 黄底白字 \033[0m”<br>echo -e “\033[44;37m 蓝底白字 \033[0m”<br>echo -e “\033[45;37m 紫底白字 \033[0m”<br>echo -e “\033[46;37m 天蓝底白字 \033[0m”<br>echo -e “\033[47;30m 白底黑字 \033[0m”</p>
 <p>控制选项说明 ：</p>
-<p>\33[0m 关闭所有属性<br>\33[1m 设置高亮度<br>\33[4m 下划线<br>\33[5m 闪烁<br>\33[7m 反显<br>\33[8m 消隐<br>\33[30m – \33[37m 设置前景色<br>\33[40m – \33[47m 设置背景色<br>\33[nA 光标上移n行<br>\33[nB 光标下移n行<br>\33[nC 光标右移n行<br>\33[nD 光标左移n行<br>\33[y;xH设置光标位置<br>\33[2J 清屏<br>\33[K 清除从光标到行尾的内容<br>\33[s 保存光标位置<br>\33[u 恢复光标位置<br>\33[?25l 隐藏光标<br>\33[?25h 显示光标 </p>
+<p>\33[0m 关闭所有属性<br>\33[1m 设置高亮度<br>\33[4m 下划线<br>\33[5m 闪烁<br>\33[7m 反显<br>\33[8m 消隐<br>\33[30m – \33[37m 设置前景色<br>\33[40m – \33[47m 设置背景色<br>\33[nA 光标上移n行<br>\33[nB 光标下移n行<br>\33[nC 光标右移n行<br>\33[nD 光标左移n行<br>\33[y;xH设置光标位置<br>\33[2J 清屏<br>\33[K 清除从光标到行尾的内容<br>\33[s 保存光标位置<br>\33[u 恢复光标位置<br>\33[?25l 隐藏光标<br>\33[?25h 显示光标</p>
 
       
     </div>
@@ -444,7 +451,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/papers/2018-02-03-sense.html" rel="next" title="之感">
+              <a href="/papers/2018-02-03-the-sense.html" rel="next" title="之感">
                 <i class="fa fa-chevron-left"></i> 之感
               </a>
             
@@ -454,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/papers/2018-02-06-bioinfomatic.html" rel="prev" title="生物信息学">
-                生物信息学 <i class="fa fa-chevron-right"></i>
+              <a href="/papers/2018-02-06-bioinformatic.html" rel="prev" title="Bioinformatics">
+                Bioinformatics <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +532,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -544,7 +551,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -563,7 +582,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -641,7 +668,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.2</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.2</div>
 
 
 
