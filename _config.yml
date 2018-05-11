@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://ghxdghxd.github.io
-root: /
+url: https://ghxdghxd.github.io/hexoblog
+root: /hexoblog/
 permalink: papers/:year-:month-:day-:title.html
 permalink_defaults:
 
@@ -86,8 +86,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-# theme: myNext
+# theme: landscape
+theme: myNext
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
